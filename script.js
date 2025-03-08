@@ -5,14 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     checkBtn.addEventListener("click", function () {
         const decimalNumber = parseInt(numberInput.value.trim(), 10);
-        console.log(decimalNumber);
         if (isNaN(decimalNumber) || decimalNumber <= 0) {
             alert('Please enter a valid positive number');
             return;
         }
 
         const Roman = romanConverter(decimalNumber);
-        console.log(Roman);
         result.textContent = `${decimalNumber} is ${Roman} in the Roman numeral system`;
         
     });
@@ -41,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 num -= romanNumerals[i].value;
             }
         }
-        console.log(romanNumeral);
         return romanNumeral;
     }
 });
